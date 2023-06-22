@@ -1,0 +1,15 @@
+pink blue orange red
+red white skyblue green
+skyblue yellow red white
+blue white blue purple
+orange green purple darkgreen
+darkgreen brown brown darkgreen
+skyblue yellow yellow brown
+purple green green pink
+white pink purple yellow
+blue skyblue darkgreen orange
+red brown orange pink
+0000
+0000
+
+# 0 above indicates 4 empty space
