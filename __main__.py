@@ -63,8 +63,8 @@ def is_all_colors_freq_equal(m: list) -> None:
     counts = Counter(m)
     del counts['0']
 
-    a={v:k for k,v in Counter(counts.values()).items()}
-    most_probable_size=a[max(a)]
+    size_frequency = Counter(counts.values())
+    most_probable_size = max(size_frequency, key=size_frequency.get)
 
     flag = True
     for k, v in counts.items():
@@ -82,7 +82,7 @@ def main():
     flat_matrix = list(flatten(matrix))
 
     if not '0' in flat_matrix:
-        print('No empty space available. Add empty tubes by entring 0')
+        print('No empty space available. Add empty tubes by entering 0')
         exit(1)
 
     if not is_all_colors_freq_equal(flat_matrix):
@@ -99,7 +99,7 @@ def main():
         print_info()
         exit(1)
 
-    solution = ColoredWater(matrix).solve(depthFirst=True)
+    solution = ColoredWater(matrix).solve(depthFirst=False)
 
     # Determining the move
     move = []
